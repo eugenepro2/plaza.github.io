@@ -1,0 +1,213 @@
+.container
+	max-width: 1170px
+	width: 100%
+
+body
+	font-family: 'Roboto Slab'
+
+h1, h2, h3, h4, h5, h6
+	font-family: 'Circe'
+
+h2
+	font-family: 'Circe'
+	font-size: 42px
+	font-weight: bold
+	letter-spacing: 4.2px
+	text-align: center
+	color: #2d2f36
+	position: relative
+	text-align: center
+	text-transform: uppercase
+	span 
+		font-family: Carolina
+		font-size: 92px
+		line-height: 0.76
+		text-align: center
+		color: rgba(129, 58, 138, 0.1)
+		letter-spacing: normal
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		font-weight: normal
+		text-transform: none
+		top: -60px !important
+
+.pop
+	background-color: rgba(#000000, .75)
+	position: fixed
+	z-index: 10
+	width: 100%
+	height: 100%
+	top: 0
+	display: none
+	&__close
+		background-image: url('../img/close.svg')
+		+cover
+		width: 16px
+		height: 16px
+		position: absolute
+		top: 0
+		right: 0
+		cursor: pointer
+	&__block
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		display: flex
+		&__left
+			background: #ffffff
+			width: 530px
+			height: 600px
+			padding: 30px
+			&__info
+				h3
+					font-family: 'Circe'
+					font-size: 24px
+					font-weight: bold
+					color: #252525
+					margin-top: 10px
+					margin-bottom: 10px
+				&__block
+					display: flex
+					flex-wrap: wrap
+					margin-bottom: 5px
+					p
+						width: 25%
+						color: #845029
+						font-size: 14px
+						font-family: 'Circe'
+						font-weight: 600
+					span
+						width: 75%
+						font-size: 14px
+						color: #252525
+
+		&__right
+			width: 430px
+			height: 550px
+			background-color: #f1f1f1
+			position: relative
+			top: 70px
+			padding: 45px
+			h2
+				text-align: left
+				font-size: 24px
+				color: #ffffff
+				position: absolute
+				top: -70px
+				left: 30px
+				width: 60%
+				span
+					font-size: 72px
+					color: rgba(#ffffff, 0.2)
+					top: -80px !important
+			p
+				font-size: 16px
+				font-weight: 300
+				line-height: 1.38
+				letter-spacing: 0.8px
+				text-align: left
+				color: #252525
+				margin-bottom: 40px
+				&:nth-of-type(2)
+					color: #a3673a
+			&__new
+				width: 70px
+				height: 70px
+				background-color: #2d2f36
+				position: absolute
+				top: 45px
+				right: -45px
+				color: #ffffff
+				font-size: 18px
+				letter-spacing: 0.9
+				display: flex
+				justify-content: center
+				align-items: center
+				text-transform: uppercase
+				font-weight: 300
+				z-index: 10
+			&__sale
+				width: 70px
+				height: 105px
+				background-color: #813a8a
+				position: absolute
+				top: 145px
+				right: -45px
+				display: flex
+				justify-content: center
+				align-items: center
+				flex-direction: column
+				z-index: 10
+				div
+					border: solid 1px #b97fc0
+					position: absolute
+					width: 64px
+					height: 99px
+					box-sizing: border-box
+				p
+					color: #ffffff
+					font-size: 20px
+					letter-spacing: 1px
+					margin-bottom: 0
+				span
+					font-size: 33px
+					font-weight: bold
+					letter-spacing: 1.7px
+					text-align: center
+					color: rgba(148, 81, 156, 0.59)
+			form
+				display: flex
+				justify-content: center
+				align-items: center
+				flex-direction: column
+				input
+					border: solid 1px #c68e67
+					border-radius: 25px
+					height: 50px
+					font-size: 14px
+					padding-left: 30px
+					width: 230px
+					margin-bottom: 10px
+				li
+					overflow: hidden
+				button
+					width: 215px
+					margin: 10px
+					background-image: linear-gradient(6deg, #702f79, #9a4ea5)
+					font-size: 18px
+					text-transform: uppercase
+					font-family: 'Roboto Slab'
+					color: #ffffff !important
+					letter-spacing: 0.9px
+					font-weight: 500
+
+	.owl
+		&-carousel
+			position: relative
+			height: 300px
+			overflow: hidden
+			margin-bottom: 10px
+		&-nav
+			img
+				width: 26px
+		&-prev
+			position: absolute
+			left: 10px
+			top: 50%
+			transform: translateY(-50%)
+		&-next
+			position: absolute
+			right: 10px
+			top: 50%
+			transform: translateY(-50%)
+		&-thumbs
+			display: flex
+			justify-content: space-between
+			img
+				width: 23%
+				height: 100%
+				border: 2px solid transparent
+				&.active
+					border: 2px solid #813a8a

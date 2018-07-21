@@ -1,6 +1,196 @@
+mixin catalog
+  a(href="#pop" data-pop).catalog__block
+    .catalog__block__image
+      .catalog__block__image__img
+        img(src="img/catalog/1.png", alt="")
+      .catalog__block__image__new New
+      .catalog__block__image__sale
+        div
+        p 25
+        span %
+      .catalog__block__image__hover
+        img(src="img/zoom-in.svg", alt="")
+    .catalog__block__heading
+      h3 Марсель
+
 ---
-title: Index Page
+title: Plaza
 ---
 extends layouts/_layout
 block content
-  h1 Index page
+  .intro(style="background-image: url(../img/home/1.jpg)")
+    .intro__top
+    .intro__right
+    .intro__bottom
+    .intro__left
+    .intro__block
+      .intro__block__logo
+        img(src="img/logo-2.svg", alt="")
+      .intro__block__text
+        h1.parallax Итальянская мебель премиум класса<br> от официального дистрибьютора
+          span(data-depth="0.5") Итальянская мебель премиум класса<br> от официального дистрибьютора
+      img.intro__down(src="img/intro-down.png", alt="")
+  .catalog(style="background-image: url('../img/bg-catalog.jpg')")
+    .container
+      .row
+        .col-xs-12
+          h2.parallax Комплекты
+            span(data-depth="0.5") Комплекты
+          .catalog__row
+            +catalog
+            +catalog
+            +catalog
+            +catalog
+            +catalog
+            +catalog
+            +catalog
+            +catalog
+  .services(style="background-image: url('../img/bg-services.jpg')")
+    .container
+      .row
+        .col-xs-12
+          h2.parallax Наши услуги
+            span(data-depth="0.5") Наши услуги
+        .col-sm-4.col-xs-12
+          .services__block
+            .services__block__icon
+              img(src="img/services/1.png", alt="")
+            h3 Быстрая доставка по всей россии и снг
+            p Благодаря наличию товарных запасов на наших складах, мы гарантируем минимальные сроки доставки приобретенной или заказанной мебели.
+        .col-sm-4.col-xs-12
+          .services__block
+            .services__block__icon
+              img(src="img/services/2.png", alt="")
+            h3 Профессиональная сборка 
+            p Благодаря наличию товарных запасов на наших складах, а также эффективной схеме поставок.
+        .col-sm-4.col-xs-12
+          .services__block
+            .services__block__icon
+              img(src="img/services/3.png", alt="")
+            h3 Сервисное обслуживание
+            p Благодаря эффективной схеме поставок, мы гарантируем минимальные сроки доставки приобретенной или заказанной мебели.
+  .form
+    .container
+      #photo
+        #photo-1.photo
+          div(data-depth="0.2")
+            img(src="img/photo-animation/1.png", alt="")
+        #photo-2.photo
+          div(data-depth="0.5")
+            img(src="img/photo-animation/2.png", alt="")
+        #photo-3.photo
+          div(data-depth="0.2")
+            img(src="img/photo-animation/3.png", alt="")
+        #photo-4.photo
+          div(data-depth="0.4")
+            img(src="img/photo-animation/4.png", alt="")
+        #photo-5.photo
+          div(data-depth="0.5")
+            img(src="img/photo-animation/5.png", alt="")
+        #photo-6.photo
+          div(data-depth="0.6")
+            img(src="img/photo-animation/6.png", alt="")
+      .row
+        .col-xs-12
+          h2.parallax У нас есть то, что вы ищите
+            span(data-depth="0.5") У нас есть то, что вы ищите
+          p Загрузите фото спальни, которую ищите, или Ваш дизайн проект,<br> и мы доставим Вам его в самые короткие сроки
+          form
+            .upload
+              input(type="file" multiple)
+              img(src="img/upload.png", alt="")
+              p Перетащите файл сюда, или 
+                span загрузите через проводник
+            .other
+              input(type="tel" placeholder="Номер телефона") 
+              input(type="email" placeholder="E-mail")
+              .menu--luce
+                .menu__list
+                  li.menu__item
+                    button.menu__link Отправить
+  .map
+    #map
+    .map__block
+      h2 Контакты
+        span(data-depth="0.5") Контакты
+      h3 Мебельный центр «PLAZA»
+      hr
+      .map__block__info
+        h4 В Махачкале:
+        p ул. А. Султана, 40<br> 8 (800) 511 20 35
+      .map__block__info
+        h4 В Хасавюрте:
+        p ул. Гамидова, 175<br> 8 (800) 511 20 35
+  footer.footer
+    .container
+      .row.middle-xs
+        .col-sm-3
+          .footer__logo
+            img(src="img/logo.svg", alt="")
+            span Мебель Плаза
+        .col-sm-9
+          ul
+            li
+              a.parallax(href="#") Мебель<br> для спальни
+                span(data-depth="0.5") Мебель<br> для спальни
+            li
+              a.parallax(href="#") Мебель<br> для гостинной
+                span(data-depth="0.5") Мебель<br> для гостинной
+            li
+              a.parallax(href="#") Мебель<br> для кухнини
+                span(data-depth="0.5") Мебель<br> для кухнини
+            li
+              a.parallax(href="#") Мебель<br> мебель
+                span(data-depth="0.5") Мебель<br> мебель
+            li
+              a.parallax(href="#") Освещение
+                span(data-depth="0.5") Освещение
+
+
+            
+  .pop#pop
+    .pop__block
+      .pop__close
+      .pop__block__left
+        .owl-carousel.owl-theme(data-slider-id="1")
+          img(src="img/slide/1.png", alt="")
+          img(src="img/slide/1.png", alt="")
+          img(src="img/slide/1.png", alt="")
+          img(src="img/slide/1.png", alt="")
+        .owl-thumbs(data-slider-id='1')
+          img(src="img/slide/1.png", alt="")
+          img(src="img/slide/1.png", alt="")
+          img(src="img/slide/1.png", alt="")
+          img(src="img/slide/1.png", alt="")
+        .pop__block__left__info
+          h3 Характеристики
+          .pop__block__left__info__block
+            p Производство:
+            span Италия
+          .pop__block__left__info__block
+            p Стиль:
+            span Барокко
+          .pop__block__left__info__block
+            p Комплектация:
+            span Двухспальная кровать, две прикроватные тумбы, шкаф, тахта, зеркало
+          .pop__block__left__info__block
+            p Материал:
+            span Массив дуба, позолота, сталь
+      .pop__block__right
+        h2.parallax Коллекция — Вена
+          span(data-depth="0.5") Коллекция — Вена
+        p Хотите побаловать себя настоящей новинкой? Тогда оформленный в стиле барокко комплект то, что нужно. Удачные сочетания элементов из золота с тонами цвета слоновой кости.
+        p Оставьте свой номер телефона и мы сообщим Вам о наличии и стоимости
+        .pop__block__right__new New
+        .pop__block__right__sale 
+          div
+          p 25
+          span % 
+        form
+          input(type="text", name="name" placeholder="Имя")
+          input(type="tel", name="name" placeholder="+7")
+          .menu--luce
+            .menu__list
+              li.menu__item
+                button.menu__link Отправить
+          

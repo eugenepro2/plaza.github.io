@@ -1,0 +1,130 @@
+/* Common styles for all menus
+
+.menu
+  line-height: 1
+  margin: 0 auto 3em
+
+.menu__list
+  position: relative
+  display: -webkit-flex
+  display: flex
+  -webkit-flex-wrap: wrap
+  flex-wrap: wrap
+  margin: 0
+  padding: 0
+  list-style: none
+
+.menu__item
+  display: block
+  margin: 1em 0
+
+.menu__link
+  font-size: 1.05em
+  font-weight: bold
+  display: block
+  padding: 1em
+  cursor: pointer
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  -webkit-touch-callout: none
+  -khtml-user-select: none
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+  &:hover, &:focus
+    outline: none
+
+.menu--luce
+  .menu__item
+    position: relative
+    margin: 1em
+  .menu__link
+    position: relative
+    display: block
+    min-width: 120px
+    text-align: center
+    color: #b5b5b5
+    -webkit-transition: color 0.6s
+    transition: color 0.6s
+    &:hover, &:focus
+      color: #929292
+  .menu__item--current .menu__link
+    color: #ffffff
+  .menu__item
+    &::before, &::after
+      content: ''
+      position: absolute
+      background: #bd8e6b
+      -webkit-transition: -webkit-transform 0.25s, background .75s
+      transition: transform 0.25s, background .75s
+      -webkit-transition-timing-function: cubic-bezier(1, 0.53, 0.79, 0.68)
+      transition-timing-function: cubic-bezier(1, 0.53, 0.79, 0.68)
+  .menu__link
+    &::before, &::after
+      content: ''
+      position: absolute
+      background: #bd8e6b
+      -webkit-transition: -webkit-transform 0.25s, background .75s
+      transition: transform 0.25s, background .75s
+      -webkit-transition-timing-function: cubic-bezier(1, 0.53, 0.79, 0.68)
+      transition-timing-function: cubic-bezier(1, 0.53, 0.79, 0.68)
+  .menu__item
+    &::before, &::after
+      top: 0
+      width: 2px
+      height: 100%
+      -webkit-transform: scale3d(1, 0, 1)
+      transform: scale3d(1, 0, 1)
+    &::before
+      left: 0
+      -webkit-transform-origin: 0% 0%
+      transform-origin: 0% 0%
+    &::after
+      right: 0
+      -webkit-transform-origin: 50% 0%
+      transform-origin: 50% 0%
+  .menu__link
+    &::before, &::after
+      left: 0
+      width: 279px
+      height: 2px
+      -webkit-transform: scale3d(0, 1, 1)
+      transform: scale3d(0, 1, 1)
+      margin: -10px
+    &::before
+      top: 0
+      -webkit-transform-origin: 0 50%
+      transform-origin: 0 50%
+    &::after
+      bottom: 0
+      -webkit-transform-origin: 0% 50%
+      transform-origin: 0% 50%
+  .menu__item .menu__link::after
+    -webkit-transition-delay: 0s
+    transition-delay: 0s
+  .menu__item--current .menu__link::after, .menu__item::before
+    -webkit-transition-delay: 0.25s
+    transition-delay: 0.25s
+  .menu__item--current::before
+    -webkit-transition-delay: 0s
+    transition-delay: 0s
+  .menu__item .menu__link::before
+    -webkit-transition-delay: 0.25s
+    transition-delay: 0.25s
+  .menu__item--current
+    .menu__link::before
+      -webkit-transition-delay: 0s
+      transition-delay: 0s
+    &::after
+      -webkit-transition-delay: 0.25s
+      transition-delay: 0.25s
+    &::before, &::after
+      -webkit-transform: scale3d(1, 1, 1)
+      transform: scale3d(1, 1, 1)
+      background: #bd8e6b 
+      z-index: 10
+    .menu__link
+      &::before, &::after
+        -webkit-transform: scale3d(1, 1, 1)
+        transform: scale3d(1, 1, 1)
+        background: #bd8e6b

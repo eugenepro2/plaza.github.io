@@ -1,0 +1,172 @@
+$img: '../img/home/';
+
+$section-amount: 5;
+// Try messing with the rotate value
+$section-rotate: 10;
+
+$mq-desktop: "min-width: 630px";
+
+
+
+.home main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  transform: translate3d(0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  @media ($mq-desktop) {
+    flex-direction: row;
+    width: 100% + ($section-rotate * 2);
+    margin-left: percentage($section-rotate) * -.01;
+  }
+  section:hover{
+    width: 35%;
+    &:after {
+      opacity: .2;
+    }
+    .overlay{
+      background-size: cover;
+    }
+    article a {
+      opacity: 1;
+      transform: translateY(0);
+
+      @media ($mq-desktop) {
+        transform: 
+          translateY(0)
+      }
+    }
+  }
+  section:first-child:hover, section:last-child:hover{
+
+  }
+}
+
+.home section:nth-of-type(1) .progressive-image div{
+  background-position: 35% 30%;
+  left: 0;
+}
+.home section:nth-of-type(2) .progressive-image div{
+  background-position: 25% 30%;
+}
+.home section:nth-of-type(3) .progressive-image div{
+  background-position: 15% 30%;
+}
+
+.home section:nth-of-type(5) .progressive-image div{
+  background-position: 15% 30%;
+  left: -65px;
+}
+
+.home section:nth-of-type(1){
+  width: 30%;
+  article{
+    position: relative;
+    left: 82px;
+  }
+}
+
+.home section:nth-of-type(5) {
+  width: 30%;
+  article{
+    position: relative;
+    left: -85px;
+  }
+}
+.home section {
+  position: relative;
+  width: 100%;
+  min-height: 20vh;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 1s cubic-bezier(1, 0.47, 0.26, 0.64);
+  .progressive-image div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: 35% 50%;
+    background-size: cover;
+    transition:
+      transform .2s,
+      width .2s;
+  }
+  img{
+    height: 100%;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    transition: opacity .2s;
+  }
+  @media ($mq-desktop) {
+    width: 20%;
+    height: 100vh;
+    margin-right: -1px;
+    transform: 
+      skewX(-#{$section-rotate}deg)
+      translateZ(0);
+    .progressive-image div {
+      left: -100px;
+      width: 400%;
+      transform: skewX(#{$section-rotate}deg);
+    }
+  }
+  @for $i from 1 through $section-amount {
+    &:nth-child(#{$i}) {
+      .progressive-image div {
+        // background-image: url(#{$img}#{$i}.jpg);
+        .hide-images & {
+          background-image: none;
+        }
+      }
+    }
+    &:first-child,
+    &:last-child {
+      .progressive-image div {
+      }
+      &:after {
+        opacity: .2;
+      }
+      article {
+      }
+    }
+  }
+}
+
+.home article {
+  position: relative;
+  padding: 24px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: white;
+  z-index: 1;
+  transition:
+    opacity .2s,
+    transform .2s;
+  @media ($mq-desktop) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0; right: 0; left: 0;
+    margin: auto;
+    opacity: 1;
+    transform: 
+      translateY(24px)
+      skewX(#{$section-rotate}deg); 
+  }
+  a {
+    opacity: 0;
+    transition: all 0.2s
+  }
+}

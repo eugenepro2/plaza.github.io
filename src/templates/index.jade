@@ -1,0 +1,35 @@
+mixin home(title, link, n)
+  section(href="page.html")
+    .progressive-image
+      //- .loadingImage(style=`background-image: url('img/home/${n}-light.jpg')` data-image=`img/home/${n}.jpg`)
+      .overlay
+        img(src=`img/home/${n}.jpg`, alt="")
+    article
+      h2.parallax= title
+        span(data-depth="0.5")= title 
+      .menu--luce
+        .menu__list
+          li.menu__item
+            a(href="page.html").menu__link Смотреть
+
+
+---
+title: Plaza
+bodyClass: homebody
+---
+extends layouts/_layout
+block content
+  .home
+    .home__logo
+      img(src="img/logo.svg", alt="")
+      a(href="tel:8800 511 20 35") 8(800) 511 20 35
+    .home__top
+    .home__right
+    .home__bottom
+    .home__left
+    main
+      +home('Спальни', 'link', '1')
+      +home('Гостиные','link', '2')
+      +home('Кухни', 'link', '3')
+      +home('Мягкая мебель', 'link', '4')
+      +home('Освещение', 'link', '5')

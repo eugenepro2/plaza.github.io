@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Template</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+  </head>
+
+  <body>
+    <!--BEGIN out-->
+    <div class="out">
+      <!--BEGIN header-->
+      <header class="header"></header>
+      <!--END header-->
+      <div class="home">
+        <div class="home__logo"><img src="img/logo.svg" alt=""><a href="tel:8800 511 20 35">8(800) 511 20 35</a></div>
+        <div class="home__top"></div>
+        <div class="home__right"></div>
+        <div class="home__bottom"></div>
+        <div class="home__left"></div>
+        <main>
+          <section href="page.html">
+            <div class="progressive-image">
+              <div class="overlay"><img src="img/home/1.jpg" alt="" /></div>
+            </div>
+            <article>
+              <h2 class="parallax">Спальни<span data-depth="0.5">Спальни</span></h2>
+              <div class="menu--luce">
+                <div class="menu__list">
+                  <li class="menu__item"><a href="page.html" class="menu__link">Смотреть</a></li>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section href="page.html">
+            <div class="progressive-image">
+              <div class="overlay"><img src="img/home/2.jpg" alt="" /></div>
+            </div>
+            <article>
+              <h2 class="parallax">Гостиные<span data-depth="0.5">Гостиные</span></h2>
+              <div class="menu--luce">
+                <div class="menu__list">
+                  <li class="menu__item"><a href="page.html" class="menu__link">Смотреть</a></li>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section href="page.html">
+            <div class="progressive-image">
+              <div class="overlay"><img src="img/home/3.jpg" alt="" /></div>
+            </div>
+            <article>
+              <h2 class="parallax">Кухни<span data-depth="0.5">Кухни</span></h2>
+              <div class="menu--luce">
+                <div class="menu__list">
+                  <li class="menu__item"><a href="page.html" class="menu__link">Смотреть</a></li>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section href="page.html">
+            <div class="progressive-image">
+              <div class="overlay"><img src="img/home/4.jpg" alt="" /></div>
+            </div>
+            <article>
+              <h2 class="parallax">Мягкая мебель<span data-depth="0.5">Мягкая мебель</span></h2>
+              <div class="menu--luce">
+                <div class="menu__list">
+                  <li class="menu__item"><a href="page.html" class="menu__link">Смотреть</a></li>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section href="page.html">
+            <div class="progressive-image">
+              <div class="overlay"><img src="img/home/5.jpg" alt="" /></div>
+            </div>
+            <article>
+              <h2 class="parallax">Освещение<span data-depth="0.5">Освещение</span></h2>
+              <div class="menu--luce">
+                <div class="menu__list">
+                  <li class="menu__item"><a href="page.html" class="menu__link">Смотреть</a></li>
+                </div>
+              </div>
+            </article>
+          </section>
+        </main>
+      </div>
+    </div>
+    <!--END out-->
+    <!--LOAD SCRIPTS-->
+    <script type="text/javascript" src="js/app.js"></script>
+    <script>
+      function initMap()
+      {
+        var uluru = {
+          lat: 42.9228996,
+          lng: 47.5211767
+        };
+        var map = new google.maps.Map(document.getElementById('map'),
+        {
+          zoom: 17,
+          center:
+          {
+            lat: 42.92279604,
+            lng: 47.5245765
+          }
+        });
+        var marker = new google.maps.Marker(
+        {
+          position: uluru,
+          map: map,
+          icon: 'img/mark.png'
+        });
+      }
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKcPNdPfc3cYlEYjOqA4kLI_ztCIlSPqc&amp;callback=initMap" async="" defer=""></script>
+  </body>
+
+</html>
